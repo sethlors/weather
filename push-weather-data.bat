@@ -7,22 +7,15 @@ REM updates to GitHub. Run this with Windows Task Scheduler.
 REM ============================================================
 
 REM Change to your weather data directory
-REM UPDATE THIS PATH TO YOUR ACTUAL WEATHER DATA DIRECTORY!
-cd /d "C:\WeatherLink\Export"
+cd /d "D:\Users\Ginny\Documents\Seth Davis Weather"
 
 REM Optional: Print current time for logging
 echo ================================================
 echo Weather Data Update: %date% %time%
 echo ================================================
 
-REM Add all HTML files (generated from .htx templates)
-git add *.htm
-
-REM Add all GIF images (weather graphs and indicators)
-git add *.gif
-
-REM Add images in Daily subdirectory (if it exists)
-git add Daily/*.gif 2>nul
+REM Add all files in the directory
+git add *
 
 REM Commit changes with timestamp
 git commit -m "Weather update: %date% %time%"
