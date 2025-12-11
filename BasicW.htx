@@ -1,9 +1,10 @@
+<!DOCTYPE html>
 <HTML>
 <HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="300">
+<meta name="viewport" content="width=800">
 <TITLE>WEATHER OUTSIDE</TITLE>
-</HEAD>
-<meta http-equiv="refresh" content="300";>
-<meta name="viewport" content="width=800" />
 <style>
  t1 {font-size:1000%}
  d1 {font-size:300%}

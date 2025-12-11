@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <HTML>
 <HEAD>
+<meta charset="UTF-8">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="refresh" content="600">
+<meta name="viewport" content="width=840">
 <TITLE>WEATHER OUTSIDE</TITLE>
-</HEAD>
-<meta http-equiv="CACHE-CONTROL" content="NO-CACHE";>
-<meta http-equiv="PRAGM" content="NO-CACHE";>
-<meta http-equiv="refresh" content="600";>
-<meta name="viewport" content="width=840" />
 
 <style>
  t1 {font-size:1000%}
