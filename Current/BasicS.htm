@@ -1,0 +1,94 @@
+<HTML>
+<HEAD>
+<TITLE>WEATHER OUTSIDE</TITLE>
+</HEAD>
+<meta http-equiv="refresh" content="300";>
+<meta name="viewport" content="width=800" />
+<style>
+ t1 {font-size:1000%}
+ d1 {font-size:300%}
+ l1 {font-size:100%}
+ l2 {font-size:150%}
+ z1 {font-size:2%}
+</style>
+
+<!--
+h1= header; top line
+t1= temp; outside
+d1= data values, except temp
+l1= label: MPH-RainTotals
+l2= labels: Chill-Heat
+z1= dummy header to size columns; width within a colspan sometimes doesn't work right
+-->
+
+<BODY>
+
+<table border="3" bordercolor="#000000" border-top="2" cellpadding=2 cellspacing=0 width="786px">
+
+<!--
+ <tr bgcolor="#FFF899">
+   <td style="width:200px; border: solid rgb(0,0,0); border-bottom: hidden; border-right: hidden"><z1></z1></td>
+   <td style="width:195px; border: solid rgb(0,0,0); border-bottom: hidden; border-left: hidden"><z1></z1></td>
+   <td style="width:195px; border: solid rgb(0,0,0); border-bottom: hidden; border-right: hidden"><z1></z1></td>
+   <td style="width:195px; border: solid rgb(0,0,0); border-bottom: hidden; border-left: hidden"><z1></z1></td>
+ </tr>
+-->
+
+ <tr bgcolor="#FFF899">
+   <td colspan="2" bordercolor="#000000" style="width:395px; white-space:nowrap; text-align:center; border: solid rgb(0,0,0); <font face="verdana,
+       Arial, Helvetica"><strong>Report Created:&nbsp;&nbsp;03/08/21&nbsp;@ 11:12pm</strong></font></td>
+   <td colspan="2" bordercolor="#000000" style="width:391px; white-space:nowrap; text-align:center; border: solid rgb(0,0,0); <font face="verdana,
+       Arial, Helvetica"><strong>Barometer:&nbsp;&nbsp;30.144&quot&nbsp;&&nbsp;Steady</strong></font></td>
+ </tr>
+
+ <tr bgcolor="#FFF899">
+   <td colspan="1" bordercolor="#000000" style="width:200px; padding-top:0px; text-align:center; vertical-align:top; border: solid rgb(0,0,0)"><font face="verdana, Arial, 
+       Helvetica">&nbsp;<img style="width:128px; max-height=100%" src="Daily/WindDirection.gif" alt="Wind Direction Arrow"/>&nbsp;<br><d1><strong><font
+       color="Brown">7.0</d1><l1>&nbsp;MPH</strong></l1>&nbsp;</font></td>
+   <td colspan="3"bordercolor="#000000" style="width:586px; white-space:nowrap; text-align:center; border: solid rgb(0,0,0)"><font face="verdana, Arial, 
+       Helvetica"><t1><strong>54.7&deg;</strong></t1></font></td>
+ </tr>
+
+ <tr bgcolor="#FFF899">
+   <td colspan="2" bordercolor="#000000" style="width:395px; white-space:nowrap; text-align:center; border: solid rgb(0,0,0)"><font face="verdana, Arial, 
+       Helvetica"><strong><font color="#EF0000"><l2>&nbsp;Humidity:</l2><d1>&nbsp;51% &nbsp;</d1></font></strong></font></td>
+   <td colspan="2" bordercolor="#000000" style="width:391px; white-space:nowrap; text-align:center; border: solid rgb(0,0,0)"><font face="verdana, Arial, 
+       Helvetica"><strong><font color="#EF0000"><l2>&nbsp;Heat Index:</l2><d1>&nbsp;53.0&deg;&nbsp;</d1></font></strong></font></td>
+ </tr>
+
+ <tr bgcolor="#FFF899">
+<!--
+   <td bordercolor="#000000" style="width:200px; text-align:center; border: solid rgb(0,0,0)"><font color="#007F2F"><font face="verdana, Arial, 
+       Helvetica"><strong><l1>Moisture Rate /hr<br></l1><d1>0.00&quot</d1></strong></font></td>
+
+   <td colspan="1" bordercolor="#000000" style="width:200px; padding-top:0px; text-align:center; vertical-align:top; border: solid rgb(0,0,0)"><font face="verdana, Arial, 
+       Helvetica"><img style="width:196px; max-height=100%" src="DayGraph/RainRateHistory.gif" alt="Rain Rate Graph"/></td>
+-->
+   <td bordercolor="#000000" style="width:200px; text-align:center; border: solid rgb(0,0,0)"><font color="#007F2F"><font face="verdana, Arial, 
+       Helvetica"><strong><l1>---- Moisture /hr<br></l1><d1>0.00&quot</d1></strong></font></td>
+
+   <td bordercolor="#000000" style="width:195px; text-align:center; border: solid rgb(0,0,0)"><font color="#007F2F"><font face="verdana, Arial, 
+       Helvetica"><strong><l1>Moisture This Storm<br></l1><d1>0.00&quot</d1></strong></font></td>
+   <td bordercolor="#000000" style="width:195px; text-align:center; border: solid rgb(0,0,0)"><font color="#007F2F"><font face="verdana, Arial, 
+       Helvetica"><strong><l1>Moisture This Month<br></l1><d1>0.00&quot</d1></strong></font></td>
+   <td bordercolor="#000000" style="width:195px; text-align:center; border: solid rgb(0,0,0)"><font color="#006F4F"><font face="verdana, Arial, 
+       Helvetica"><strong><l1>Moisture This Year<br></l1><d1>0.00&quot</d1></strong></font></td>
+ </tr>
+
+</table>
+</BODY>
+</HTML>
+
+<!--
+table width="786px" 
+
+Cell widths:
+ td-1 =200px	(WindDir&Speed; month rain)
+ td-2 =195px
+ td-3 =195px
+ td-4 =196px	(year rain)
+
+ td-1+2   =395px	(Date/Time)
+ td-2+3+4 =586px	(Temperature)
+ td-3+4   =391px	(Barometer)
+-->
