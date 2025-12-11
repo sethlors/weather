@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="300">
+    <title>Seth Davis Weather Station</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            background: rgba(26, 26, 46, 0.95);
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        h1 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            font-weight: 600;
+            letter-spacing: -0.5px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #a8a8b8;
+            margin-bottom: 30px;
+            font-size: 1.1em;
+        }
+        
+        .section {
+            margin-bottom: 30px;
+        }
+        
+        .section h2 {
+            color: #ffffff;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-weight: 600;
+            border-bottom: 2px solid rgba(99, 102, 241, 0.3);
+            padding-bottom: 10px;
+        }
+        
+        .links-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 12px;
+        }
+        
+        .link-item {
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.1), rgba(139, 92, 246, 0.1));
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .link-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(99, 102, 241, 0.2), transparent);
+            transition: left 0.5s ease;
+        }
+        
+        .link-item:hover::before {
+            left: 100%;
+        }
+        
+        .link-item:hover {
+            transform: translateY(-2px);
+            border-color: rgba(99, 102, 241, 0.5);
+            box-shadow: 0 4px 20px rgba(99, 102, 241, 0.3);
+            background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(139, 92, 246, 0.2));
+        }
+        
+        .link-item a {
+            color: #e0e0ff;
+            text-decoration: none;
+            display: block;
+            padding: 16px 20px;
+            font-weight: 500;
+            font-size: 1em;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .update-banner {
+            background: rgba(99, 102, 241, 0.1);
+            border: 1px solid rgba(99, 102, 241, 0.3);
+            padding: 15px;
+            margin-bottom: 30px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .update-banner p {
+            color: #c0c0d8;
+            margin: 5px 0;
+            font-size: 0.95em;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #a8a8b8;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.8em;
+            }
+            
+            .links-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Seth Davis Weather Station</h1>
+        <p class="subtitle">Live Weather Data - Updated Every 5 Minutes</p>
+        
+        <div class="update-banner">
+            <p><strong>Auto-refresh:</strong> This page and all weather pages refresh every 5 minutes</p>
+        </div>
+        
+        <!-- Current Weather Views -->
+        <div class="section">
+            <h2>Current Weather</h2>
+            <div class="links-grid">
+                <div class="link-item">
+                    <a href="BasicW.htm">Wide View</a>
+                </div>
+                <div class="link-item">
+                    <a href="Basic.htm">Standard View</a>
+                </div>
+                <div class="link-item">
+                    <a href="BasicS.htm">Compact View</a>
+                </div>
+                <div class="link-item">
+                    <a href="Detail.htm">Detailed Report</a>
+                </div>
+                <div class="link-item">
+                    <a href="Detail-All.htm">All Data View</a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Weekly Weather Views -->
+        <div class="section">
+            <h2>Weekly Weather</h2>
+            <div class="links-grid">
+                <div class="link-item">
+                    <a href="Weekly/BasicW.htm">Wide View (Weekly)</a>
+                </div>
+                <div class="link-item">
+                    <a href="Weekly/Basic.htm">Standard View (Weekly)</a>
+                </div>
+                <div class="link-item">
+                    <a href="Weekly/BasicS.htm">Compact View (Weekly)</a>
+                </div>
+                <div class="link-item">
+                    <a href="Weekly/Detail.htm">Detailed Report (Weekly)</a>
+                </div>
+                <div class="link-item">
+                    <a href="Weekly/Detail-All.htm">All Data View (Weekly)</a>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>Weather Station Data</strong> | Powered by Davis Weather Station</p>
+            <p style="margin-top: 10px; font-size: 0.85em;">Updated automatically via GitHub Pages</p>
+        </footer>
+    </div>
+</body>
+</html>
